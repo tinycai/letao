@@ -1,0 +1,125 @@
+.mt15{
+    margin-top:150px;
+}
+.panel_title{
+    text-align:center;
+}
+.btn_mr50{
+    margin-right:50px;
+}
+
+a{
+  text-decoration: none;
+}
+a:link,a:visited,a:hover,a:active{
+  text-decoration: none;
+}
+ul{
+  margin: 0;
+  padding: 0;
+  list-style:none;
+}
+/*左边导航开始*/
+
+.aside{
+  width: 180px;
+  height: 100%;
+  position:absolute;
+  left:0;
+  background-color: #222d32;
+  transition:all 1s;
+}
+.aside.now{
+  left:-180px;
+}
+.brand{
+  width: 180px;
+  height: 50px;
+  background-color: #337ab7;
+  position:absolute;
+}
+.brand a{
+  text-align:center;
+  color:#fff;
+  line-height:50px;
+}
+.brand h4{
+  font-size:24px;
+}
+
+.pic{
+  width: 180px;
+  height: 150px;
+  position:absolute;
+  top:80px;
+  text-align:center;
+}
+.pic img{
+  width: 80px;
+  height: 80px;
+  border-radius:50%;
+}
+.pic p{
+  color:#fff;
+  font-size:16px;
+  text-alignzL:center;
+  line-height:40px;
+  height:40px;
+}
+.nav{
+  position:absolute;
+  top:230px;
+}
+.nav li{
+  width: 180px;
+  height:40px;
+  line-height:40px;
+  padding-left:30px;
+}
+
+.nav  a{
+  color:#ccc;
+  display:block;
+  height: 40px;
+}
+.nav li.now{
+  border:3px solid transparent;
+  border-left-color:#367fa9;
+  background-color: #1d1f21;
+}
+.nav .child a{
+  padding-left:50px;
+  display:block;
+}
+
+/*头部开始*/
+.contener{
+  transition:all 1s;
+  margin-left: 180px;
+}
+.header{
+  height: 50px;
+  background-color: #3c8dbc;
+  line-height:50px;
+  margin-bottom:20px;
+  
+  padding:17px 20px;
+}
+.header span {
+  color: #fff;
+  font-size:16px;
+}
+.contener.now{
+  margin-left:0;
+}
+
+/*柱状,饼状图区*/
+.index_main .pic_left,.pic_right{
+  width:45%;
+  height:400px;
+}
+
+/*用户管理的表格区*/
+.user_main{
+  margin:0 10px;
+}

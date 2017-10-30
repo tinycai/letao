@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <title>乐淘管理系统-首页</title>
+  <link rel="stylesheet" href="lib/bootstrap/css/bootstrap.css">
+  <link rel="stylesheet" href="lib/bootstrap-validator/css/bootstrapValidator.css">
+  <link rel="stylesheet" href="lib/nprogress/nprogress.css">
+  <link rel="stylesheet" href="css/common.css">
+  <link rel="stylesheet" href="css/index.css">
+</head>
+<body>
+
+<!--左侧边框开始-->
+<div class="aside">
+  <!--标签-->
+  <div class="brand">
+    <a href="index.html" ><h4>黑马十四期</h4></a>
+  </div>
+  
+  <!--头像-->
+  <div class="pic">
+    <img src="images/default.png" alt="">
+    <p>超级管理员</p>
+  </div>
+  
+  <!--导航-->
+  <div class="nav">
+    <ul>
+      <li>
+        <a href="user.html">
+          <span class="glyphicon glyphicon-user"></span>
+          <span>用户管理</span>
+        </a>
+      </li>
+      <li class="category">
+        <a href="javascript:;">
+          <span class="glyphicon glyphicon-list"></span>
+          <span>分类管理</span>
+        </a>
+      </li>
+      <div class="child" style="display:none">
+        <a href="first.html">一级分类</a>
+        <a href="second.html">二级分类</a>
+      </div>
+      <li>
+        <a href="product.html">
+          <span class="glyphicon glyphicon-tags"></span>
+          <span>商品管理</span>
+        </a>
+      </li>
+    </ul>
+  </div>
+</div>
+
+
+<!--主体区域-->
+<div class="contener">
+  <!--头部导航开始-->
+  <div class="header">
+    <a href="#">
+      <span class="justify glyphicon glyphicon-align-justify pull-left"></span>
+    </a>
+    
+    <a href="#">
+      <span class="logout glyphicon glyphicon-log-out pull-right"></span>
+    </a>
+  </div>
+  
+  <!--面包屑导航-->
+  <div class="container-fluid bread">
+    <ol class="breadcrumb">
+      <li><a href="#">管理系统</a></li>
+      <li><a href="#">分类管理</a></li>
+      <li class="active">一级分类</li>
+    </ol>
+  </div>
+</div>
+
+
+<!--模态框-->
+<div class="modal fade" id="myModal" tabindex="-1">
+  <div class="modal-dialog">
+    <div class="modal-content modal-sm">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title" id="myModalLabel">温馨提示</h4>
+      </div>
+      <div class="modal-body">
+        <i class="glyphicon glyphicon-info-sign text-danger"></i>
+        <span class="text-danger">您确定要退出后台管理系统吗？</span>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default cancel" data-dismiss="modal">取消</button>
+        <button type="button" class="btn btn-primary confirm">确定</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<script src="lib/jquery/jquery.js"></script>
+<script src="lib/bootstrap/js/bootstrap.js"></script>
+<script src="lib/bootstrap-validator/js/bootstrapValidator.js"></script>
+<script src="lib/nprogress/nprogress.js"></script>
+<script src="lib/echarts/echarts.min.js"></script>
+<script src="js/common.js"></script>
+<script src="js/index.js"></script>
+</body>
+</html>
