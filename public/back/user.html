@@ -78,14 +78,24 @@
   <!--用户主体部分-->
   <div class="user_main">
     <table class="table table-bordered table-hover">
-      <tr align="center">
-        <td width="10%">序号</td>
-        <td width="30%">用户名</td>
-        <td width="30%">手机号</td>
-        <td width="20%">状态</td>
-        <td width="10%">操作</td>
-      </tr>
+      <thead>
+        <tr align="center">
+          <td width="10%">序号</td>
+          <td width="30%">用户名</td>
+          <td width="30%">手机号</td>
+          <td width="20%">状态</td>
+          <td width="10%">操作</td>
+        </tr>
+      </thead>
+      
+      <tbody>
+      <!--待填-->
+      </tbody>
     </table>
+    <!--分页开始-->
+    <div class="page pull-right">
+      <ul id="paginator"></ul>
+    </div>
   </div>
   
 </div>
@@ -112,12 +122,35 @@
 </div>
 
 
+<!--模板引擎开始-->
+<script type="text/html" id="tml">
+  {{each rows v i}}
+  <tr align="center">
+    <!--page,size数据来自于data对象,page表示当前的页数,size表示当前的显示的条数-->
+    <td>{{(page-1)*size + i+1}}</td>
+    <td>{{v.username}}</td>
+    <td>{{v.mobile}}</td>
+    <td>{{v.isDelete===1?"正常":"禁用"}}</td>
+    <td>
+      {{if v.isDelete===1}}
+      <button class="btn btn-sm btn-danger">禁用</button>
+      {{/if}}
+      {{if v.isDelete===0}}
+      <button class="btn btn-sm btn-success">启用</button>
+      {{/if}}
+    </td>
+  </tr>
+  {{/each}}
+  
+</script>
+
 <script src="lib/jquery/jquery.js"></script>
 <script src="lib/bootstrap/js/bootstrap.js"></script>
 <script src="lib/bootstrap-validator/js/bootstrapValidator.js"></script>
 <script src="lib/nprogress/nprogress.js"></script>
-<script src="lib/echarts/echarts.min.js"></script>
+<script src="lib/artTemplate/template-web.js"></script>
+<script src="lib/bootstrap-paginator/bootstrap-paginator.js"></script>
 <script src="js/common.js"></script>
-<script src="js/index.js"></script>
+<script src="js/user.js"></script>
 </body>
 </html>
