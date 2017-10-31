@@ -102,6 +102,8 @@
 
 
 <!--模态框-->
+
+<!--退出登录的模态框-->
 <div class="modal fade" id="myModal" tabindex="-1">
   <div class="modal-dialog">
     <div class="modal-content modal-sm">
@@ -121,6 +123,26 @@
   </div>
 </div>
 
+<!--禁用按钮的模态框-->
+<div class="modal fade" id="btnModal" tabindex="-1">
+  <div class="modal-dialog">
+    <div class="modal-content modal-sm">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title" id="btnModalLabel">温馨提示</h4>
+      </div>
+      <div class="modal-body">
+        <i class="glyphicon glyphicon-info-sign text-danger"></i>
+        <span class="text-danger">您确定要执行此操作吗？</span>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default " data-dismiss="modal">取消</button>
+        <button type="button" class="btn btn-primary user_confirm">确定</button>
+      </div>
+    </div>
+  </div>
+</div>
+
 
 <!--模板引擎开始-->
 <script type="text/html" id="tml">
@@ -131,7 +153,7 @@
     <td>{{v.username}}</td>
     <td>{{v.mobile}}</td>
     <td>{{v.isDelete===1?"正常":"禁用"}}</td>
-    <td>
+    <td data-id="{{v.id}}" data-is-delete="{{v.isDelete}}">
       {{if v.isDelete===1}}
       <button class="btn btn-sm btn-danger">禁用</button>
       {{/if}}

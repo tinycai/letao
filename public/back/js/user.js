@@ -15,6 +15,8 @@ $(function(){
         // console.log(data);
         //打印出来的是数组,要转化为对象
         // console.log(data.rows);
+        // console.log(data.total);
+        // console.log(data);
         var html=template("tml",data);
         $("tbody").html(html);
       
@@ -34,9 +36,42 @@ $(function(){
       }
     })
   }
- 
   render();
   
+  
+  //因为按钮是动态渲染出来的,所以给tbody注册委托事件
+  $("tbody").on("click",".btn",function(){
+    //显示模态框
+    $("#btnModal").modal("show");
+    
+    //获取存储在td上的id值和isDelete的值
+    var id=$(this).parent().data("id");
+    var isDelete=$(this).parent().data("isDelete");
+    isDelete=isDelete===1?0:1;
+  
+    //注册操作按钮模态框上确认按钮的点击事件
+    //为了避免重复注册事件,!!!一定要先取消之前的事件!!!
+    $(".user_confirm").off().on("click",function(){
+      //隐藏模态框
+      $("#btnModal").modal("hide");
+      //更新用户信息调用ajax请求
+      $.ajax({
+        type:"post",
+        url:"/user/updateUser",
+        data:{
+          id:id,
+          isDelete:isDelete
+        },
+        success:function(data){
+          if(data.success){
+            console.log(1);
+            render();
+          }
+        }
+      })
+    })
+    
+  })
   
   
  

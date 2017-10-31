@@ -39,8 +39,8 @@
           <span>分类管理</span>
         </a>
       </li>
-      <div class="child" style="display:none">
-        <a href="first.html">一级分类</a>
+      <div class="child" style="display:block">
+        <a href="first.html" class="now">一级分类</a>
         <a href="second.html">二级分类</a>
       </div>
       <li>
@@ -75,7 +75,32 @@
       <li class="active">一级分类</li>
     </ol>
   </div>
+  
+  <div class="first_main mlr15">
+  <!--添加分类按钮-->
+   <button class="btn btn-default mb20">添加分类</button>
+  
+  <!--添加表格-->
+    <table class="table table-bordered table-hover">
+      <thead>
+      <tr align="center">
+        <td width="30%">序号</td>
+        <td width="70%">分类名称</td>
+      </tr>
+      </thead>
+      
+      <tbody>
+      <!--待填-->
+      </tbody>
+    </table>
+    
+    <!--制作分页-->
+    <div class="page pull-right">
+      <ul id="pagintor"></ul>
+    </div>
+    
 </div>
+
 
 
 <!--模态框-->
@@ -99,12 +124,22 @@
 </div>
 
 
+<script type="text/html" id="tml">
+  {{each rows v i}}
+  <tr align="center">
+    <td>{{(page-1)*size + i + 1}}</td>
+    <td>{{v.categoryName}}</td>
+  </tr>
+  {{/each}}
+</script>
+
 <script src="lib/jquery/jquery.js"></script>
 <script src="lib/bootstrap/js/bootstrap.js"></script>
 <script src="lib/bootstrap-validator/js/bootstrapValidator.js"></script>
 <script src="lib/nprogress/nprogress.js"></script>
-<script src="lib/echarts/echarts.min.js"></script>
+<script src="lib/artTemplate/template-web.js"></script>
+<script src="lib/bootstrap-paginator/bootstrap-paginator.js"></script>
 <script src="js/common.js"></script>
-<script src="js/index.js"></script>
+<script src="js/first.js"></script>
 </body>
 </html>

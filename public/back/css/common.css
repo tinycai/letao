@@ -88,8 +88,16 @@ ul{
   background-color: #1d1f21;
 }
 .nav .child a{
-  padding-left:50px;
+  padding-left:15px;
   display:block;
+  text-align:center;
+  height:40px;
+  line-height:40px;
+}
+.nav .child a.now{
+  border:3px solid transparent;
+  border-left-color:#367fa9;
+  background-color: #1d1f21;
 }
 
 /*头部开始*/
@@ -122,4 +130,12 @@ ul{
 /*用户管理的表格区*/
 .user_main{
   margin:0 10px;
+}
+
+/*first界面的按钮*/
+.mb20{
+  margin-bottom:20px;
+}
+.mlr15{
+  margin:5px 15px
 }
