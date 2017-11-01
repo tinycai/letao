@@ -139,3 +139,20 @@ ul{
 .mlr15{
   margin:5px 15px
 }
+
+
+/*second界面的图片上传按钮*/
+.fileupload_box{
+  position:relative;
+}
+#fileupload{
+  position: absolute;
+  left: -8px;
+  top: 0px;
+  opacity: 0;
+}
+
+/*second界面的表格文字对其*/
+ .table > tbody> tr > td{
+  vertical-align:middle !important;
+}
