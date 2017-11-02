@@ -1,6 +1,6 @@
 .search_header{
   height: 34px;
-  padding:55px 10px 10px 10px;
+  padding:10px 10px 10px 10px;
   margin-bottom:10px;
 }
 .search_text{
@@ -16,19 +16,21 @@
   
 }
 .btn_search{
-  height:38px;
-  position:absolute;
-  top:56px;
-  right:10px;
-  text-align:center;
-  line-height:34px;
-  border-radius:0 5px 5px 0;
-  padding:0 12px;
+  height: 38px;
+  position: absolute;
+  top: 11px;
+  right: 10px;
+  text-align: center;
+  line-height: 34px;
+  border-radius: 0 5px 5px 0;
+  padding: 0 12px;
 }
+
+
 
 /*搜索历史头部开始*/
 .history_header{
-  margin-top:45px;
+  margin-top:20px;
   padding:10px;
 }
 .history_header span{

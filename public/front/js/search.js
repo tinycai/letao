@@ -62,7 +62,7 @@ $(function(){
       arr.splice(index,1);
     }
     
-    if(arr.length>=10){
+    if(arr.length>=15){
       arr.pop();
     }
     //如果两个条件都满足,就将文本框的内容存入到,数组的第一个
@@ -77,6 +77,9 @@ $(function(){
     
     //清空文本框中的内容
     $(".search_text").val(" ");
+    
+    //跳转到searchList.html界面
+    location.href="searchList.html?key="+value;
   })
   
   
@@ -87,12 +90,24 @@ $(function(){
 //4. 把这个数组重新存储到缓存中
 //5. 重新渲染
   $(".history_content").on("click",".delete",function(){
-    var index=$(this).data("index");
-    var arr=getData();
-    //删除那条数据
-    arr.splice(index,1);
-    var str=JSON.stringify(arr)
-    localStorage.setItem("lt_search_history",str);
-    render();
+    var $this=$(this);
+    var btnArray = ["是", "否"];
+    mui.confirm('你确定要删除这条搜索历史吗?','警告',btnArray,function(data){
+      if(data.index==0){
+        var index=$this.data("index");
+        var arr=getData();
+        console.log(index);
+        //删除那条数据
+        arr.splice(index,1);
+        var str=JSON.stringify(arr)
+        localStorage.setItem("lt_search_history",str);
+        render();
+        mui.toast('删除成功');
+      }else{
+        mui.toast('删除失败');
+      }
+      
+    });
+    
   })
 });
