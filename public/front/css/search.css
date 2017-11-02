@@ -1,65 +1,74 @@
-@charset "UTF-8";
-
-.lt_search {
-  padding: 10px;
-  position: relative;
-}
-
-
-.lt_search input {
-  width: 100%;
+.search_header{
   height: 34px;
-  border: 1px solid #007aff;
+  padding:55px 10px 10px 10px;
+  margin-bottom:10px;
+}
+.search_text{
+  width: 100%;
+  line-height:34px;
+  height:34px;
+  padding-left:10px;
+  font-size:12px;
+  color:#666;
+  border:1px solid #690;
+  border-radius:5px;
+  position:relative;
+  
+}
+.btn_search{
+  height:38px;
+  position:absolute;
+  top:56px;
+  right:10px;
+  text-align:center;
+  line-height:34px;
+  border-radius:0 5px 5px 0;
+  padding:0 12px;
+}
+
+/*搜索历史头部开始*/
+.history_header{
+  margin-top:45px;
+  padding:10px;
+}
+.history_header span{
+  font-size:12px;
+  color:#666;
+  dispaly:block;
+  height:14px;
+  line-height:14px;
+  text-align:center;
+}
+
+/*历史内容*/
+.history_content{
+  margin-left:10px;
+  margin-right:10px;
+  border:1px dashed #ccc;
+  margin-top:10px;
+}
+.history_content.now{
+  border:1px solid transparent;
+}
+.history_content p{
+  padding:10px;
+}
+.history_content li{
+  height:30px;
   font-size: 12px;
-  border-radius: 5px;
-  margin: 0;
+  text-align:center;
+  line-height:30px;
+  border-bottom:1px dashed #cccccc;
+  padding:0 10px 0 10px;
+}
+.history_content li:last-child{
+  border:none;
+}
+.history_content li a{
+  color:#007aff;
+}
+.history_content li span{
+  text-align:center;
+  line-height:30px;
 }
 
-.lt_search button {
-  position: absolute;
-  right: 10px;
-  top: 10px;
-  border-radius: 0 5px 5px 0;
-}
-
-
-
-.lt_history {
-  padding: 10px;
-}
-
-.lt_history .title {
-  font-size: 12px;
-  color: #666;
-}
-
-.lt_history .title span {
-  height: 24px;
-  line-height: 24px;
-  display: block;
-}
-
-.lt_history .content {
-  border: 1px dashed #ccc;
-}
-
-.lt_history .content li {
-  height: 30px;
-  line-height: 30px;
-  border-bottom: 1px dashed  #ccc;
-  padding: 0 10px;
-}
-
-.lt_history .content li:last-child {
-  border-bottom: none;
-}
-
-.lt_history .content a {
-  font-size: 12px;
-}
-
-.lt_history .content span {
-  display: block;
-  height: 30px;
-  line-height: 30px;
-}

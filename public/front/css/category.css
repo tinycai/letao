@@ -1,50 +1,42 @@
-@charset "UTF-8";
-.lt_category_l {
+
+/*左侧导航开始*/
+.left_nav {
+  padding-top: 45px;
   width: 90px;
   height: 100%;
-  float: left;
-  position: relative;
+  position:absolute;
 }
-
-
-.lt_category_l li {
-  height: 50px;
-  line-height: 50px;
-  border-right: 1px solid red;
-  border-bottom: 1px solid red;
-  text-align: center;
-  background-color: pink;
+.left_nav li{
+  height:35px;
+  width: 100%;
+  line-height:35px;
+  text-align:center;
+  border-right:1px solid #ccc;
+  border-bottom:1px solid #ccc;
+  background-color: #fff3c4;
+  float:left
 }
-
-.lt_category_l li.now {
+.left_nav li.now{
   background-color: #fff;
-  border-right: none;
+  border-bottom:none;
+  border-right:none;
+}
+.left_nav li span{
+  color:#666;
+  font-size:14px;
 }
 
-
-.lt_category_l a {
-  color: #666;
+/*右侧商品*/
+.right_nav{
+  margin-left:90px;
+  padding:45px 10px 0 10px;
 }
-
-.lt_category_r {
-  height: 100%;
-  overflow: hidden;
-  position: relative;
-}
-
-.lt_category_r li {
+.right_nav li{
   width: 33.33%;
-  float: left;
-  text-align: center;
+  float:left
 }
-
-.lt_category_r img {
-  width: 62px;
-  height: 62px;
-  margin: 0 auto;
-}
-
-.lt_category_r .info {
-  margin-top: 10px;
-  margin-left: 10px;
+.right_nav li img{
+  width: 100%;
+  display:block;
+  margin:0 auto;
 }

@@ -7,63 +7,74 @@
   <title>乐淘商城-分类页</title>
   <link rel="icon" href="favicon.ico">
   <link rel="stylesheet" href="lib/mui/css/mui.css">
-  <link rel="stylesheet" href="lib/fa/css/font-awesome.min.css">
+  <link rel="stylesheet" href="lib/fa/css/font-awesome.css">
   <link rel="stylesheet" href="css/common.css">
   <link rel="stylesheet" href="css/category.css">
 </head>
 <body>
-
-
 <div class="lt_container">
+  <!--头部开始-->
   <div class="lt_header">
-    <!--
-      javascript: 伪协议，意思就是这个本来是地址，现在变成不是页面跳转，要执行js代码。
-    -->
-    <a class="icon_left" href="javascript:history.go(-1);"><span class="fa fa-chevron-left"></span></a>
-    <h4>乐淘分类</h4>
-    <a class="icon_right" href="search.html"><span class="fa fa-search"></span></a>
-  </div>
-
-  <div class="lt_content">
-    <div class="lt_category_l">
-      <div class="mui-scroll-wrapper">
-        <ul class="mui-scroll">
-          <!--挖个坑-->
-        </ul>
-      </div>
-
+    <div class="header_left ">
+      <a href="javascript:history.go(-1);" class="icon_left">
+        <span class="fa fa-chevron-left "></span>
+      </a>
     </div>
-    <div class="lt_category_r">
-      <div class="mui-scroll-wrapper">
-        <ul class="mui-scroll">
-          <!--挖个坑-->
-        </ul>
-      </div>
+    <div class="header_title">
+      <h4>乐淘分类</h4>
+    </div>
+    <div class="header_right">
+      <a href="search.html" class="icon_right">
+        <span class="fa fa-search "></span>
+      </a>
     </div>
   </div>
-
-  <div class="lt_footer">
+  
+  <div class="mui-scroll-wrapper">
+    <div class="mui-scroll">
+      <!--左侧导航-->
+      <div class="left_nav">
+        <ul class="mui-clearfix first_nav">
+        <!--待填-->
+        </ul>
+      </div>
+      
+      
+      <!--右侧商品展示-->
+      <div class="right_nav">
+        <ul class="mui-clearfix second_nav">
+          <!--待填-->
+        </ul>
+      </div>
+      
+      
+      
+    </div>
+  </div>
+  <!--底部开始-->
+  <div class="lt_foot">
     <ul>
-      <li>
-        <a href="index.html">
+      <li >
+        <a href="#">
           <span class="fa fa-home"></span>
           <p>首页</p>
         </a>
       </li>
+      
       <li class="now">
-        <a href="category.html">
+        <a href="#">
           <span class="fa fa-bars"></span>
           <p>分类</p>
         </a>
       </li>
       <li>
-        <a href="cart.html">
+        <a href="#">
           <span class="fa fa-shopping-cart"></span>
           <p>购物车</p>
         </a>
       </li>
       <li>
-        <a href="user.html">
+        <a href="#">
           <span class="fa fa-user"></span>
           <p>会员中心</p>
         </a>
@@ -72,30 +83,31 @@
   </div>
 </div>
 
-<script type="text/html" id="tpl">
+<!--模板引擎开始-->
+<script type="text/html" id="tml">
   {{each rows v i}}
-  <li data-id="{{v.id}}" class="{{i===0?'now':''}}"><a href="javascript:;">{{v.categoryName}}</a></li>
-  {{/each}}
-</script>
-
-<script type="text/html" id="tpl2">
-  {{if rows.length === 0}}
-  <p class="info">暂时没有更多的数据</p>
-  {{/if}}
-
-  {{each rows v i}}
-  <li>
-    <a href="#">
-      <img src="{{v.brandLogo}}" alt="">
-      <p>{{v.brandName}}</p>
+  <li  data-id={{v.id}} class={{i===0?'now':''}}>
+    <a href="javascript:;">
+      <span>{{v.categoryName}}</span>
     </a>
   </li>
   {{/each}}
 </script>
 
-<script src="lib/mui/js/mui.js"></script>
+<script type="text/html" id="tml2">
+  {{if rows.length===0}}
+  <p>没有更多商品</p>
+  {{/if}}
+
+  {{each rows v i}}
+  <li><img src="{{v.brandLogo}}" alt=""></li>
+  {{/each}}
+</script>
+
 <script src="lib/zepto/zepto.min.js"></script>
+<script src="lib/mui/js/mui.js"></script>
 <script src="lib/artTemplate/template-web.js"></script>
 <script src="js/category.js"></script>
+
 </body>
 </html>
