@@ -16,7 +16,12 @@ var tools={
   },
   getKey:function(key){
       return this.setKey()[key];
+    },
+  checkLogin:function(data){
+    if(data.message==400){
+      location.href="login.html?=retUrl"+location.href;
     }
+  }
     
 }
 

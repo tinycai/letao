@@ -92,5 +92,28 @@ ul{
 font-size:12px;
 }
 
+/*添加遮罩层*/
+.loading{
+  width: 40px;
+  height: 40px;
+  border:3px solid #069;
+  position:absolute;
+  top:200px;
+  left: 50%;
+  transform:translateX(-50%);
+  animation: zhuan 1s infinite ease-in-out;
+}
+@keyframes zhuan {
+  0%{
+    transform:translateX(-50%) rotate(0deg);
+  }
+  50%{
+    transform:translateX(-50%) rotate(360deg);
+  }
+  100%{
+    transform:translateX(-50%) rotate(0deg);
+  }
+}
+
 
 

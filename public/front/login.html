@@ -4,12 +4,12 @@
   <meta charset="UTF-8">
   <meta name="viewport"
         content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-  <title>乐淘商城-分类页</title>
+  <title>乐淘首页</title>
   <link rel="icon" href="favicon.ico">
   <link rel="stylesheet" href="lib/mui/css/mui.css">
   <link rel="stylesheet" href="lib/fa/css/font-awesome.css">
   <link rel="stylesheet" href="css/common.css">
-  <link rel="stylesheet" href="css/category.css">
+  <link rel="stylesheet" href="css/login.css">
 </head>
 <body>
 <div class="lt_container">
@@ -21,48 +21,42 @@
       </a>
     </div>
     <div class="header_title">
-      <h4>乐淘分类</h4>
+      <h4>登录</h4>
     </div>
-    <div class="header_right">
-      <a href="search.html" class="icon_right">
-        <span class="fa fa-search "></span>
-      </a>
-    </div>
+   
   </div>
   
-  
+  <!--内容开始-->
   <div class="lt_content">
-    <div class="lt_category_l">
-      <div class="mui-scroll-wrapper">
-        <ul class="mui-scroll">
-          <!--挖个坑-->
-        </ul>
+    <form class="mui-input-group">
+      <div class="mui-input-row">
+        <label>用户名</label>
+        <input type="text" class="mui-input-clear login_user"  placeholder="请输入用户名">
       </div>
-    
-    </div>
-    <div class="lt_category_r">
-      <div class="mui-scroll-wrapper">
-        <ul class="mui-scroll">
-          <!--挖个坑-->
-        </ul>
+      <div class="mui-input-row">
+        <label>密码</label>
+        <input type="password" class="mui-input-password login_pwd" placeholder="请输入密码">
       </div>
-    </div>
-  </div>
-      
-      
-    </div>
+      <div class="mui-button-row">
+        <button type="button" class="mui-btn mui-btn-primary btn_login" >登录</button>
+        <button type="reset" class="mui-btn mui-btn-danger btn_reset" >重置</button>
+      </div>
+    </form>
+  
+  
+  
   </div>
   <!--底部开始-->
   <div class="lt_foot">
     <ul>
-      <li >
+      <li class="now">
         <a href="index.html">
           <span class="fa fa-home"></span>
           <p>首页</p>
         </a>
       </li>
       
-      <li class="now">
+      <li>
         <a href="category.html">
           <span class="fa fa-bars"></span>
           <p>分类</p>
@@ -74,7 +68,7 @@
           <p>购物车</p>
         </a>
       </li>
-      <li>
+      <li class="now">
         <a href="user.html">
           <span class="fa fa-user"></span>
           <p>会员中心</p>
@@ -82,34 +76,12 @@
       </li>
     </ul>
   </div>
-</div>
-</div>
-<!--模板引擎开始-->
-<script type="text/html" id="tpl">
-  {{each rows v i}}
-  <li data-id="{{v.id}}" class="{{i===0?'now':''}}"><a href="javascript:;">{{v.categoryName}}</a></li>
-  {{/each}}
-</script>
 
-<script type="text/html" id="tpl2">
-  {{if rows.length === 0}}
-  <p class="info">暂时没有更多的数据</p>
-  {{/if}}
-  
-  {{each rows v i}}
-  <li>
-    <a href="#">
-      <img src="{{v.brandLogo}}" alt="">
-      <p>{{v.brandName}}</p>
-    </a>
-  </li>
-  {{/each}}
-</script>
+</div>
 
 <script src="lib/zepto/zepto.min.js"></script>
 <script src="lib/mui/js/mui.js"></script>
-<script src="lib/artTemplate/template-web.js"></script>
-<script src="js/category.js"></script>
+<script src="js/login.js"></script>
 
 </body>
 </html>

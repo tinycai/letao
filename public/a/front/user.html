@@ -4,12 +4,12 @@
   <meta charset="UTF-8">
   <meta name="viewport"
         content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-  <title>乐淘商城-搜索列表</title>
+  <title>乐淘首页</title>
   <link rel="icon" href="favicon.ico">
   <link rel="stylesheet" href="lib/mui/css/mui.css">
   <link rel="stylesheet" href="lib/fa/css/font-awesome.min.css">
   <link rel="stylesheet" href="css/common.css">
-  <link rel="stylesheet" href="css/searchList.css">
+  <link rel="stylesheet" href="css/user.css">
 </head>
 <body>
 
@@ -17,36 +17,29 @@
 <div class="lt_container">
   <div class="lt_header">
     <a class="icon_left" href="javascript:history.go(-1);"><span class="fa fa-chevron-left"></span></a>
-    <h4>商品列表</h4>
+    <h4>个人中心</h4>
   </div>
 
   <div class="lt_content">
-    <div class="mui-scroll-wrapper">
-      <div class="mui-scroll">
+    <ul class="mui-table-view">
+      <li class="mui-table-view-cell mui-media userinfo">
 
-        <!--搜索框-->
-        <div class="lt_search">
-          <input type="text" class="search_text" placeholder="请输入搜索关键字">
-          <button class="search_btn mui-btn-blue">搜索</button>
-        </div>
+      </li>
+      <li class="mui-table-view-cell">
+        <a class="mui-navigate-right">账号与安全</a>
+      </li>
+      <li class="mui-table-view-cell">
+        <a href="cart.html" class="mui-navigate-right">我的购物车</a>
+      </li>
+      <li class="mui-table-view-cell">
+        <a class="mui-navigate-right">收货地址管理</a>
+      </li>
+    </ul>
 
-        
-        <!--排序div-->
-        <div class="lt_sort">
-          <a href="javascript:;">上架时间 <span class="fa fa-angle-down"></span></a>
-          <a href="javascript:;">价格 <span class="fa fa-angle-down"></span></a>
-          <a href="javascript:;">库存 <span class="fa fa-angle-down"></span></a>
-          <a href="javascript:;">折扣 <span class="fa fa-angle-down"></span></a>
-        </div>
-
-        <!--商品-->
-        <div class="lt_product mui-clearfix">
-          <div class="loading"></div>
-          <!--挖个坑-->
-        </div>
-        
-      </div>
+    <div class="logout">
+      <a href="javascript:;" class="mui-btn mui-block">退出</a>
     </div>
+
   </div>
 
 
@@ -70,7 +63,7 @@
           <p>购物车</p>
         </a>
       </li>
-      <li>
+      <li class="now">
         <a href="user.html">
           <span class="fa fa-user"></span>
           <p>会员中心</p>
@@ -80,30 +73,20 @@
   </div>
 </div>
 
-
 <script type="text/html" id="tpl">
-  {{if data.length === 0}}
-  <p>没有搜索到相关的商品</p>
-  {{/if}}
-
-  {{each data v i}}
-  <a href="#" class="item">
-    <img src="{{v.pic[0].picAddr}}" alt="">
-    <p class="mui-ellipsis-2">{{v.proName}}</p>
-    <p>
-      <span>&yen;{{v.price}}</span>
-      <span>&yen;{{v.oldPrice}}</span>
-    </p>
-    <button class="mui-btn-blue">立即购买</button>
+  <a href="javascript:;" class="mui-navigate-right">
+    <img class="mui-media-object mui-pull-left" src="images/user.jpg">
+    <div class="mui-media-body">
+      {{username}}
+      <p class='mui-ellipsis'>绑定手机：{{mobile}}</p>
+    </div>
   </a>
-  {{/each}}
 </script>
 
 <script src="lib/mui/js/mui.js"></script>
 <script src="lib/zepto/zepto.min.js"></script>
 <script src="lib/artTemplate/template-web.js"></script>
 <script src="js/common.js"></script>
-<script src="js/searchList.js"></script>
-
+<script src="js/user.js"></script>
 </body>
 </html>

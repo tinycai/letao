@@ -1,0 +1,70 @@
+.pro_box{
+   padding:0 10px 0 10px;
+   border-top:1px solid #ccc;
+ }
+.pro_name{
+  border-bottom:1px solid #ccc;
+}
+.pro_price{
+  border-bottom:1px solid #ccc;
+  height:40px;
+  line-height:40px;
+}
+.pro_size{
+  border-bottom:1px solid #ccc;
+  padding-top:10px;
+}
+.pro_num{
+  margin-top:10px;
+  padding-bottom: 10px;
+  border-bottom:1px solid #ccc;
+}
+.pro_desc{
+ padding-top:10px;
+}
+.pro_price .red{
+  color:red;
+  margin-left:10px;
+}
+.ml{
+  margin-left:10px;
+}
+.fz{
+  font-size:12px;
+}
+.pro_price .line{
+  text-decoration: line-through;
+  font-size:12px;
+}
+
+.pro_foot{
+  height: 55px;
+  width: 100%;
+  background-color: #eee;
+  position:fixed;
+  bottom:0;
+  line-height:55px;
+  text-align:center;
+  padding:0 10px 0 10px;
+}
+.foot_car{
+  float:left;
+  color:#367fa9;
+}
+.foot_btn{
+  float:right;
+  margin-top:10px;
+}
+.pro_size_num{
+  width: 30px;
+  height:30px;
+  border: 1px solid #ccc;
+  margin-right:10px;
+  margin-bottom:2px;
+  display:inline-block;
+  text-align:center;
+  line-height:30px;
+}
+.pro_size_num.now{
+  background-color: #069;
+}

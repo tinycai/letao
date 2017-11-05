@@ -1,0 +1,31 @@
+.register_content{
+  padding:10px;
+}
+.code input{
+  width:60%;
+}
+ .code .mui-btn{
+  width: 35%;
+  fint-size:17px;
+  height:40px;
+  line-height:40px;
+  padding:0;
+}
+.code .mui-btn.disable{
+  background-color: #999;
+  border:1px solid transparent;
+}
+ .reg_book{
+   width: 100%;
+ }
+ .res_bottom{
+   padding:10px;
+ }
+ .mui-pull-left{
+   font-size:12px;
+ }
+ .res_now{
+   color:#007aff;
+   font-size:12px;
+ }
+ 

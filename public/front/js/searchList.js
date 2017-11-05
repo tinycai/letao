@@ -30,8 +30,12 @@ $(function(){
      url:"/product/queryProduct",
      data:data,
      success:function(data){
-       console.log(data);
-       $(".pic_area").html(template("tml",data))
+       // console.log(data);
+       //添加延时器,首先让页面出现遮罩层
+       setTimeout(function(){
+         $(".pic_area").html(template("tml",data))
+       },1000)
+       $(".loading").hide();
      }
    })
   
